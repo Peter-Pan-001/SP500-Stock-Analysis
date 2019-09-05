@@ -873,17 +873,3 @@ print('Gradient Boosting: {:.2f}'.format(np.mean(scores)))
 scores = cross_val_score(rf_model,X_train,y_train,cv=5)
 print('Random Forest: {:.2f}'.format(np.mean(scores)))
 
-
-# In[98]:
-
-
-# comparison of mean square error on test data
-
-from sklearn.metrics import mean_squared_error
-
-print('Dummy: {:.2f}'.format(mean_squared_error(y_test, dummy_pred)))
-print('Logistic Regression: {:.2f}'.format(mean_squared_error(y_test, logreg_pred)))
-print('Decision Tree: {:.2f}'.format(mean_squared_error(y_test, dtc_pred)))
-print('Gradient Boosting: {:.2f}'.format(mean_squared_error(y_test, gbc_pred)))
-print('Random Forest: {:.2f}'.format(mean_squared_error(y_test, rf_pred)))
-
